@@ -1,5 +1,6 @@
 package es.jacampano.calculadora;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -24,6 +25,12 @@ public class CalculadoraParametroTest {
         this.exp = exp;
     }
 
+    /* 
+    @Before
+    public void setUp() {
+        calculadora = new Calculadora();
+    }
+    */
     @Parameters
     public static Iterable<Object[]> getData() {
         List<Object[]> params = new ArrayList<>();
@@ -39,7 +46,6 @@ public class CalculadoraParametroTest {
 
     @Test
     public void testSumar() {
-        
         assumeTrue(tipoOperacion == TipoOperacion.SUMA);
         Calculadora calculadora = new Calculadora();
         assertEquals(exp, calculadora.sumar(a,b));
