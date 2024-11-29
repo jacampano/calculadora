@@ -34,4 +34,17 @@ public class CalculadoraTest {
     public void testDivisionPorCero() {
         calculadora.dividir(6, 0);
     }
+
+    @Test
+    public void testDivisionPorCeroFail() {
+    try {
+        Calculadora calculadora = new Calculadora();
+        calculadora.dividir(10, 0);
+        fail("Se esperaba una IllegalArgumentException pero no se lanzó.");
+        } catch (IllegalArgumentException e) {
+            assertEquals("No se puede dividir por cero", e.getMessage());
+        }
+
+    }
+
 }

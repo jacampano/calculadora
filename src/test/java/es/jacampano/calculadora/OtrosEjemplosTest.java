@@ -1,7 +1,7 @@
 package es.jacampano.calculadora;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+
 
 public class OtrosEjemplosTest {
     private final OtrosEjemplos ejemplo = new OtrosEjemplos();
